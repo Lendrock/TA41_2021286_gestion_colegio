@@ -25,9 +25,9 @@ public class GestionColegioApplication implements CommandLineRunner {
 	String salto = System.lineSeparator();
 
 	public static void main(String[] args) {
-		logger.info("INICIALIZANDO LA APLICACION");
+		logger.info("INICIALIZANDO LA APLICACION ");
 		SpringApplication.run(GestionColegioApplication.class, args);
-		logger.info("FINALIZANDO LA APLICACION");
+		logger.info("FINALIZANDO LA APLICACION ");
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class GestionColegioApplication implements CommandLineRunner {
 		while (!salir){
 			var opcion = mostrarMenu(consola);
 			salir = ejecutarOpciones(consola, opcion);
-			logger.info("salto");
+			logger.info(" ");
 
 		}
 	}
@@ -142,11 +142,11 @@ public class GestionColegioApplication implements CommandLineRunner {
 			}
 			case 6 ->{
 				logger.info("Fiuuuuumba " + salto + salto);
-				salir=true;
+				salir = true;
 			}
 			default -> logger.info("Opción invalida");
 
 		}
-		return false;
+		return salir;
 	}
 }

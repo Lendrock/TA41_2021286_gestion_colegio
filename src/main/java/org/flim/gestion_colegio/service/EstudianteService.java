@@ -3,9 +3,11 @@ package org.flim.gestion_colegio.service;
 import org.flim.gestion_colegio.entity.Estudiante;
 import org.flim.gestion_colegio.repository.EstudianteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EstudianteService implements IEstudianteService{
 
     @Autowired
@@ -13,12 +15,13 @@ public class EstudianteService implements IEstudianteService{
 
     @Override
     public List<Estudiante> listarEstudiantes() {
-        return List.of();
+        return estudianteRepository.findAll();
     }
 
     @Override
     public Estudiante buscarEstudianteporId(Integer id) {
-        return null;
+        return estudianteRepository.findById(id)
+                .orElse(null);
     }
 
     @Override
