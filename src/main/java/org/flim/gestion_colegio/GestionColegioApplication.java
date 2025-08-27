@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-@SpringBootApplication
+//@SpringBootApplication
 public class GestionColegioApplication implements CommandLineRunner {
 
 	@Autowired
